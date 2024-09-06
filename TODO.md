@@ -3,12 +3,21 @@
 ## Initial setup
 
 1. Initialize project / 'npm - init --yes' /
-2. Install initial dependencies / nodemon, express, express-handlebars, bcrypt, jsonwebtoken, cookie-parser /
+2. Install initial dependencies / -D nodemon /, express, express-handlebars, bcrypt, jsonwebtoken, cookie-parser /
 3. Add resources
-4. Express config / const express = require('express') /
-    * body parser
-    * static path
-5. Configure Express handlebars
+4. Express config / 
+const express = require('express') 
+const app = express();
+app.listen(PORT, () => console.log(`Surver is listening on port ${PORT}`)) /
+
+    * body parser / app.use(express.urlencoded({extended: false})); /
+    * static path / app.use(express.static('public')); /
+
+5. Configure Express handlebars / 
+app.engine('hbs', hbs.engine({
+    extname: 'hbs'
+})) /
+
 6. Add router   
 7. Add home controller
 8. Add layout
