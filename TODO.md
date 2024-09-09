@@ -26,10 +26,10 @@ app.engine('hbs', hbs.engine({
 
 ## Database setup
 
-1. Install mongoose
+1. Install mongoose / npm i mongoose /
 2. Configure mongoose
-    * creating path in .env
-    * creating file 'db.js' and make the config...
+    * creating file 'db.js' and make the config... 
+    * creating path in .env / exports.DB_QUERYSTRING = 'mongodb://localhost:27017/artGallery'; /
     * call the db in index.js
 3. Create User model
 
